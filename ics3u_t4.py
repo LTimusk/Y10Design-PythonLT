@@ -29,7 +29,8 @@ answer4 = num1 - num2
 # round the answer to 5 decimal places
 # add 'str' so that it can be treated as a sentence
 
-print ("The multiplication will give: " + str(round (answer1, 5)))
+print ("The multiplication will give: ")
+print (round(answer1, 5))
 print ("The division will give: " + str(round (answer2, 5)))
 print ("The addition will give: " + str(round (answer3, 5)))
 print ("The subtraction will give: " + str(round (answer4, 5)))
