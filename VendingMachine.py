@@ -1,3 +1,4 @@
+import sys
 
 RunVM = True
 
@@ -5,12 +6,12 @@ RunVM = True
 
 print("\n")
 
-price_cc = round(2.49, 2)
-price_ab = round(2.49, 2)
-price_kk = round(2.49, 2)
-price_ck = round(0.99, 2)
-price_cm = round(2.99, 2)
-price_wm = round(2.05, 2)
+price_cc = int(round(2.49, 2))
+price_ab = int(round(2.49, 2))
+price_kk = int(round(2.49, 2))
+price_ck = int(round(0.99, 2))
+price_cm = int(round(2.99, 2))
+price_wm = int(round(2.05, 2))
 
 print("Select your items: \n")
 print(" A1: Crispy Crunch ................ $2.49")
@@ -20,9 +21,18 @@ print(" A4: Cookies ...................... $0.99")
 print(" B1: Chocolate Milk ............... $2.99")
 print(" B2: White Milk  .................. $2.05")
 
+print("\n")
+
 food = str(input("What items would you like? \n"))
 
 print("\n")
+
+
+
+
+#************************* PRICE MANAGEMENT *******************************
+
+
 
 if food == "A1":
 	print("The price of the Crispy Crunch is $" + str(round (price_cc, 2)))
@@ -49,6 +59,45 @@ elif food == "B2":
 	RunVM = False
 else:
 	print("invalid choice")
+	print("************************* END OF CODE ************************")
+	sys.exit()
+
+quant = int(input("How many would you like? "))
+
+print("\n")
+
+#************************* QUANTITY MANAGEMENT *******************************
+
+print ("\n")
+
+if food == "A1":
+	print("Your final price is: \n$" + str(price_cc * quant))
+	RunVM = False
+
+elif food == "A2":
+	print("Your final price is: \n$" + str(price_cc * quant))
+	RunVM = False
+
+elif food == "A3":
+	print("Your final price is: \n$" + str(price_cc * quant))
+	RunVM = False
+
+elif food == "A4":
+	print("Your final price is: \n$" + str(price_cc * quant))
+	RunVM = False
+
+elif food == "B1":
+	print("Your final price is: \n$" + str(price_cc * quant))
+	RunVM = False
+
+elif food == "B2":
+	print("Your final price is: \n$" + str(price_cc * quant))
+	RunVM = False
+else:
+	print("invalid choice")
+	print("************************* END OF CODE ************************")
+	sys.exit()
+
 
 #print("\n")
 
@@ -65,41 +114,74 @@ else:
 #elif food == "B2":
 	#print("Please Insert:" + str(price_wm))
 
+
+
+
+
+
+
+
+
+
+#************************* MONEY MANAGEMENT *******************************
+
+
+
+
+
 print("\n")
 
 CashIn= float(input("Please insert the required cost: \n"))
 
 if food == "A1":
-	if CashIn == price_cc:
+	if CashIn == int(price_cc * quant):
 		print("Thank You!")
+		print("************************* END OF CODE ************************")
 	else:
-		print ("It sees: " + str(CashIn))
 		print("Insufficient Funds")
+		print("************************* END OF CODE ************************")
+		sys.exit()
 elif food == "A2":
-	if CashIn == price_ab:
+	if CashIn == int(price_ab * quant):
 		print("Thank You!")
+		print("************************* END OF CODE ************************")
 	else:
 		print("Insufficient Funds")
+		print("************************* END OF CODE ************************")
+		sys.exit()
 elif food == "A3":
-	if CashIn == price_kk:
+	if CashIn == int(price_kk * quant):
 		print("Thank You!")
+		print("************************* END OF CODE ************************")
 	else:
 		print("Insufficient Funds")
+		print("************************* END OF CODE ************************")
+		sys.exit()
 elif food == "A4":
-	if CashIn == price_ck:
+	if CashIn == int(price_ck * quant):
 		print("Thank You!")
+		print("************************* END OF CODE ************************")
 	else:
 		print("Insufficient Funds")
+		print("************************* END OF CODE ************************")
+		sys.exit()
 elif food == "B1":
-	if CashIn == price_cm:
+	if CashIn == int(price_cm* quant):
 		print("Thank You!")
+		print("************************* END OF CODE ************************")
 	else:
 		print("Insufficient Funds")
+		print("************************* END OF CODE ************************")
+		sys.exit()
 elif food == "B2":
-	if CashIn == price_wm:
+	if CashIn == int(price_wm * quant):
 		print("Thank You!")
+		print("************************* END OF CODE ************************")
 	else:
 		print("Insufficient Funds")
+		print("************************* END OF CODE ************************")
+		sys.exit()
+
 
 
 
