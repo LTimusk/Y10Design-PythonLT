@@ -15,12 +15,12 @@ amount_wm = 10
 
 print("\n")
 
-price_cc = float(2.49)
-price_ab = int(round(2.49, 2))
-price_kk = int(round(2.49, 2))
-price_ck = int(round(0.99, 2))
-price_cm = int(round(2.99, 2))
-price_wm = int(round(2.05, 2))
+price_cc = float(round(2.49, 2))
+price_ab = float(round(2.49, 2))
+price_kk = float(round(2.49, 2))
+price_ck = float(round(0.99, 2))
+price_cm = float(round(2.99, 2))
+price_wm = float(round(2.05, 2))
 
 print("Select your items: \n")
 print(" A1: Crispy Crunch ................ $2.49")
@@ -183,6 +183,9 @@ elif food == "B2":
 		sys.exit()
 
 
+#Here I'm assuming that we start with 10 of every type of candy, and subtracting 
+#However many the user takes
+
 amountleft_cc = 10 - quant
 amountleft_ab = 10 - quant
 amountleft_kk = 10 - quant
@@ -208,8 +211,6 @@ elif food == "B2":
 print("Thank you for using Timusk Vending Machines")
 
 print("\n ************************** END OF CODE ***************************")
-
-
 
 
 
