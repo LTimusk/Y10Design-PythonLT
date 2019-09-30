@@ -4,9 +4,18 @@ RunVM = True
 
 # while RunVM:
 
+amount_cc = 10
+amount_ab = 10
+amount_kk = 10
+amount_ck = 10
+amount_cm = 10
+amount_wm = 10
+
+
+
 print("\n")
 
-price_cc = int(round(2.49, 2))
+price_cc = float(2.49)
 price_ab = int(round(2.49, 2))
 price_kk = int(round(2.49, 2))
 price_ck = int(round(0.99, 2))
@@ -35,27 +44,27 @@ print("\n")
 
 
 if food == "A1":
-	print("The price of the Crispy Crunch is $" + str(round (price_cc, 2)))
+	print("The price of a Crispy Crunch is $" + str(price_cc))
 	RunVM = False
 
 elif food == "A2":
-	print("The price of the Aero Bar is $" + str(round (price_ab, 2)))
+	print("The price of an Aero Bar is $" + str(price_ab))
 	RunVM = False
 
 elif food == "A3":
-	print("The price of the Kit Kat Bar is $" + str(round (price_kk, 2)))
+	print("The price of a Kit Kat Bar is $" + str(price_kk))
 	RunVM = False
 
 elif food == "A4":
-	print("The price of the Cookies is $" + str(round (price_ck, 2)))
+	print("The price of a pack of Cookies is $" + str(price_ck))
 	RunVM = False
 
 elif food == "B1":
-	print("The price of the Chocolate Milk is $" + str(round (price_cm, 2)))
+	print("The price of a Chocolate Milk is $" + str(price_cm))
 	RunVM = False
 
 elif food == "B2":
-	print("The price of the White Milk is $" + str(round (price_wm, 2)))
+	print("The price of a White Milk is $" + str(price_wm))
 	RunVM = False
 else:
 	print("invalid choice")
@@ -123,6 +132,9 @@ else:
 
 
 
+
+
+
 #************************* MONEY MANAGEMENT *******************************
 
 
@@ -134,56 +146,68 @@ print("\n")
 CashIn= float(input("Please insert the required cost: \n"))
 
 if food == "A1":
-	if CashIn == int(price_cc * quant):
-		print("Thank You!")
-		print("************************* END OF CODE ************************")
+	if CashIn == float(price_cc * quant):
+		print("\n Purchase Valid")
 	else:
 		print("Insufficient Funds")
-		print("************************* END OF CODE ************************")
 		sys.exit()
 elif food == "A2":
-	if CashIn == int(price_ab * quant):
-		print("Thank You!")
-		print("************************* END OF CODE ************************")
+	if CashIn == float(price_ab * quant):
+		print("\n Purchase Valid")
 	else:
 		print("Insufficient Funds")
-		print("************************* END OF CODE ************************")
 		sys.exit()
 elif food == "A3":
-	if CashIn == int(price_kk * quant):
-		print("Thank You!")
-		print("************************* END OF CODE ************************")
+	if CashIn == float(price_kk * quant):
+		print("\n Purchase Valid")
 	else:
 		print("Insufficient Funds")
-		print("************************* END OF CODE ************************")
 		sys.exit()
 elif food == "A4":
-	if CashIn == int(price_ck * quant):
-		print("Thank You!")
-		print("************************* END OF CODE ************************")
+	if CashIn == float(price_ck * quant):
+		print("\n Purchase Valid")
 	else:
 		print("Insufficient Funds")
-		print("************************* END OF CODE ************************")
 		sys.exit()
 elif food == "B1":
-	if CashIn == int(price_cm* quant):
-		print("Thank You!")
-		print("************************* END OF CODE ************************")
+	if CashIn == float(price_cm* quant):
+		print("\n Purchase Valid")
 	else:
 		print("Insufficient Funds")
-		print("************************* END OF CODE ************************")
 		sys.exit()
 elif food == "B2":
-	if CashIn == int(price_wm * quant):
-		print("Thank You!")
-		print("************************* END OF CODE ************************")
+	if CashIn == float(price_wm * quant):
+		print("\n Purchase Valid")
 	else:
 		print("Insufficient Funds")
-		print("************************* END OF CODE ************************")
 		sys.exit()
 
 
+amountleft_cc = 10 - quant
+amountleft_ab = 10 - quant
+amountleft_kk = 10 - quant
+amountleft_ck = 10 - quant
+amountleft_cm = 10 - quant
+amountleft_wm = 10 - quant
 
+
+if food == "A1":
+	print("\n There are: " + str(amountleft_cc) + " Crispy crunches left \n ")
+elif food == "A2":
+	print("\n There are: " + str(amountleft_ab) + " Aero bars left \n ")
+elif food == "A3": 
+	print("\n There are: " + str(amountleft_kk) + " Kit kats left \n ")
+elif food == "A4":
+	print("\n There are: " + str(amountleft_ck) + " Cookies left \n ")
+elif food == "B1":
+	print("\n There are: " + str(amountleft_cm) + " Chocolate milks left \n ")
+elif food == "B2":
+	print("\n There are: " + str(amountleft_wm) + " White milks left \n ") 
+
+
+print("Thank you for using Timusk Vending Machines")
+
+print("\n ************************** END OF CODE ***************************")
 
 
 
