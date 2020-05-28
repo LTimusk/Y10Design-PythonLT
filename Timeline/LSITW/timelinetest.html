@@ -1,7 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="styles.css" rel="stylesheet">
+  <script defer src="script.js"></script>
+  <title>History of Basketball</title>
+</head>
+
+
 
 <style>
 * {
@@ -187,8 +196,6 @@ body {
 
 .centered2{
     text-align: center;
-    padding-right: 30px;
-    padding-top: 30px;
   }
 
 .title{
@@ -228,72 +235,9 @@ body {
   padding-top: 20px;
 }
 
-
-#myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: #000000;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
-}
-
-#myBtn:hover {
-  background-color: #555;
-}
-
-
-.btn-group button {
-  background-color: #4CAF50; /* Green background */
-  border: 1px solid green; /* Green border */
-  color: white; /* White text */
-  padding: 10px 24px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
-  float: left; /* Float the buttons side by side */
-}
-
-/* Clear floats (clearfix hack) */
-.btn-group:after {
-  content: "";
-  clear: both;
-  display: table;
-  width: 50%;
-}
-
-.btn-group button {
-  border-right: none; /* Prevent double borders */
-  width: 50%;
-}
-
-/* Add a background color on hover */
-.btn-group button:hover {
-  background-color: #3e8e41;
-  
-}
-
-#incorrect {
-
-  text-align: center;
-  padding-right: 30px;
-  padding-top: 30px;
-
-}
-
 </style>
 </head> 
-
-<!-- ******************************* HERE IS MY HTML ******************************************** --> 
-
 <body>
-
-
 
 <div class="title">
   <h1 class = "centered"> History of the Basketball Shot </h1>
@@ -391,60 +335,27 @@ body {
         <div class="content">
         
           <div class = "centered2">
-
-            <h2> Think you know enough? Take the Quiz! </h2>
-            <br>
-            <h4> Over the years, three point shots have _____ </h4>
-
-
-            <div class="btn-group">
-              <button style="background-color: Green;" onclick="ChangeColour()">Increased</button>
-              <button style="background-color: Blue;">Decreased</button>
-
-            <p id="Incorrect"></p>
-
-              
+            
+            <div class="container">
+              <div id="question-container" class="hide">
+                <div id="question">Question</div>
+                <div id="answer-buttons" class="btn-grid">
+                  <button class="btn">Answer 1</button>
+                  <button class="btn">Answer 2</button>
+                  <button class="btn">Answer 3</button>
+                  <button class="btn">Answer 4</button>
+                </div>
+              </div>
+              <div class="controls">
+                <button id="start-btn" class="start-btn btn">Start</button>
+                <button id="next-btn" class="next-btn btn hide">Next</button>
+              </div>
+            </div>
 
           </div>
         </div>
       </div>
     </div>
-
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-
-
-<!-- ******************************* HERE IS MY JAVASCRIPT ******************************************** --> 
-
-
-<script>
-//Get the button
-var mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
-function ChangeColour() {
-   document.getElementById("Incorrect").innerHTML = "Incorrect!";
-
-}
-
-
-
-</script>
 
 
 </body>
